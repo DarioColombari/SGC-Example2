@@ -7,7 +7,7 @@ Analizza i file sintetici in `sampleResults/` e implementa nel package
 `analysis/` una pipeline che:
 
 - legga e pulisca i CSV;
-- individui i periodi stazionari;
+- individui i periodi stazionari rispetto a WT01;
 - calcoli media, deviazione standard e numerosità di `n_el`
   per percentuale di H2 e livello di carico;
 - generi un grafico PNG a 300 dpi;
@@ -17,4 +17,4 @@ Analizza i file sintetici in `sampleResults/` e implementa nel package
 
 Verifica l'implementazione esclusivamente su `sampleResults/`.
 
-Non scrivere test. Al termine, proponi il passaggio al `test-agent`.
+Non scrivere test. Al termine, proponi il passaggio al `tester`.
