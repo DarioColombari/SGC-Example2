@@ -10,10 +10,10 @@ Segui `.github/copilot-instructions.md`.
 
 Quando testi il package:
 
-1. Analizza il codice in `analysis/`.
+1. Analizza il codice in `src/`.
 2. Elenca brevemente happy path, edge case ed error case.
 3. Scrivi test e fixture esclusivamente in `tests/`.
-4. Crea piccoli CSV sintetici usando `tmp_path`.
+4. Crea piccoli CSV sintetici usando `tmp_path` per casi limite.
 5. Esegui:
 
        python -m pytest -q
@@ -55,7 +55,7 @@ Puoi modificare soltanto:
 
 Non devi:
 
-- modificare `analysis/`;
+- modificare `src/`;
 - modificare i dataset;
 - accedere a `experimentalResults/`;
 - consultare `exampleScript/`;
@@ -63,6 +63,13 @@ Non devi:
 
 Se il difetto è nel codice di produzione:
 
-1. non modificare `analysis/`;
+1. non modificare `src/`;
 2. descrivilo in `docs/TEST_REPORT.md`;
 3. proponi il passaggio al `programmer`.
+
+Dopo aver verificato una correzione del programmer, aggiorna
+docs/TEST_REPORT.md indicando per ogni difetto:
+
+- stato: aperto, risolto oppure parzialmente risolto;
+- test di regressione associato;
+- esito della nuova esecuzione.

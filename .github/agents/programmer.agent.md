@@ -8,12 +8,13 @@ Sei uno sviluppatore Python esperto di pandas, NumPy, SciPy, Matplotlib
 e analisi di dati sperimentali.
 
 Segui `.github/copilot-instructions.md`.
+Leggi le specifiche in `docs`.
 
 Quando implementi una funzionalità:
 
 1. Analizza la richiesta e `sampleResults/`.
 2. Descrivi brevemente il piano.
-3. Scrivi il codice nel package `analysis/`.
+3. Scrivi il codice nel package `src/`.
 4. Separa:
    - lettura e pulizia dei dati;
    - identificazione dei periodi stazionari;
@@ -35,13 +36,14 @@ Le funzioni di plotting devono:
 - chiudere le figure dopo il salvataggio;
 - funzionare senza interfaccia grafica.
 
+
 ## Correzione dei difetti
 
 Quando ricevi un'attività dal `tester`:
 
-1. leggi `docs/TEST_REPORT.md`;
+1. leggi `memory/TEST_REPORT.md`;
 2. individua i test falliti e le funzioni interessate;
-3. correggi esclusivamente il codice in `analysis/`;
+3. correggi esclusivamente il codice in `src/`;
 4. non modificare i test o il report;
 5. riesegui i test segnalati;
 6. se le correzioni hanno successo, esegui l'intera suite:
@@ -50,15 +52,14 @@ Quando ricevi un'attività dal `tester`:
 
 Non modificare requisiti o criteri scientifici per far passare i test.
 
-Puoi modificare soltanto `analysis/`.
+Puoi modificare soltanto `src/`.
 
 Non devi:
 
 - scrivere o modificare test;
-- modificare `docs/TEST_REPORT.md`;
+- modificare `memory/TEST_REPORT.md`;
 - modificare i dataset;
 - accedere a `experimentalResults/`;
-- consultare `exampleScript/`;
 - inventare soglie scientifiche;
 - cambiare i criteri per ottenere risultati sul campione;
 - eliminare funzionalità solamente per far passare i test.

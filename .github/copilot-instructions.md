@@ -21,11 +21,11 @@ L'analisi deve:
 
 - `sampleResults/`: dataset sintetico per sviluppo e verifica;
 - `experimentalResults/`: dati sperimentali di produzione;
-- `analysis/`: codice Python della pipeline;
+- `src/`: codice Python della pipeline;
 - `tests/`: test automatici;
 - `results/`: output e grafici generati;
 
-Il codice della pipeline deve essere scritto in `analysis/`.
+Il codice della pipeline deve essere scritto in `src/`.
 
 I test automatici devono essere scritti in `tests/`.
 
@@ -54,7 +54,7 @@ eseguita tramite CLI su terminal o interfaccia vs code (es. modalità debug)
 
 L'ambiente virtuale da utilizzare è .venv. 
 L'installazione di un pacchetto in .venv deve essere sempre autorizzata dall'utente. 
-
+Richiedi l'installazione di un pacchetto se necessario.
 
 ## Regole Generali
 Il codice pulito, sicuro e facilmente mantenibile.
