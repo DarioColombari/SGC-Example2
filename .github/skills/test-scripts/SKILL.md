@@ -3,7 +3,7 @@ name: test-scripts
 description: Scrive ed esegue i test automatici della pipeline
 disable-model-invocation: true
 ---
-Analizza il package `analysis/`, elenca sinteticamente i casi di test
+Analizza il package `src/`, elenca sinteticamente i casi di test
 e implementa in `tests/` i test pytest per:
 
 - lettura e pulizia dei CSV;

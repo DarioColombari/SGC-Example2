@@ -2,9 +2,11 @@
 
 ## Contesto
 
-Questo repository contiene una pipeline Python per analizzare dati
+Questo repository sviluppa una pipeline Python per analizzare dati
 sperimentali relativi a un motore alimentato con miscele di gas naturale
-e idrogeno.
+e idrogeno, salvati in files .csv.
+Un file d'esempio è presente nella cartella `sampleResults/` ed ha la stessa 
+struttura dei files acquisti dal campo. 
 
 L'analisi deve:
 
@@ -15,6 +17,28 @@ L'analisi deve:
 - calcolare media, deviazione standard e numerosità dei campioni;
 - generare un grafico riepilogativo.
 
+## Formato dei files
+
+La percentuale di idrogeno è identificata da un numero nel nome del file. 
+Es. nome: "prova_auto_x*.csv", x indica la percentuale di idrogeno. 
+
+I file CSV possono contenere:
+
+- righe di metadati prima dell'header;
+- separatore `;`;
+- virgola come separatore decimale;
+- delimitatori finali non uniformi;
+- spazi iniziali
+
+Alcune grandezze rilevanti nelle colonne del .csv:
+- Time, timestamp di acquisizione
+- WT01, potenza elettrica generata;
+- P_in, potenza termica in ingresso da combustibile;
+- n_th, efficienza termica; 
+- n_el, efficienza elettrica. 
+
+La colonna WT01 deve essere utilizzata per identificare i punti stazionari
+
 ## Struttura del repository
 
 - `sampleResults/`: dataset sintetico per sviluppo e verifica;
@@ -22,7 +46,6 @@ L'analisi deve:
 - `analysis/`: codice Python della pipeline;
 - `tests/`: test automatici;
 - `results/`: output e grafici generati;
-- `exampleScript/`: soluzione di riferimento da non consultare.
 
 Il codice della pipeline deve essere scritto in `analysis/`.
 
@@ -45,49 +68,29 @@ Non devi:
 - aprire, cercare o elaborare file in `experimentalResults/`;
 - modificare i file presenti nei dataset;
 - utilizzare i dati di produzione per sviluppo o test;
-- leggere o utilizzare il contenuto di `exampleScript/`.
 
-L'esecuzione sui dati di produzione è riservata all'utente.
-
-Puoi indicare il seguente comando, ma non devi eseguirlo:
-
-    python -m analysis \
-      --dataset-dir experimentalResults \
-      --output-dir results/production
-
-Queste istruzioni definiscono il comportamento atteso, ma non costituiscono
-una barriera tecnica di accesso ai file.
+L'esecuzione sui dati di produzione è riservata all'utente e potrà essere
+eseguita tramite CLI su terminal o interfaccia vs code (es. modalità debug)
 
 ## Regole sull'ambiente virtuale
 
-L'ambiente virtuale è .venv. 
+L'ambiente virtuale da utilizzare è .venv. 
 L'installazione di un pacchetto in .venv deve essere sempre autorizzata dall'utente. 
 
-## Formato dei dati
 
-I file CSV possono contenere:
+## Regole Generali
+Il codice pulito, sicuro e facilmente mantenibile.
 
-- righe di metadati prima dell'header;
-- separatore `;`;
-- virgola come separatore decimale;
-- delimitatori finali non uniformi;
-- spazi iniziali
+# Regole Obbligatorie
+- Utilizza .venv 
+- Utilizza NumPy e SciPy per l'analisi dei dati.
+- Utilizza MatPlotLib per il plotting.
+- Utilizza DataFrame in Pandas per la gestione dei dati.
+- Usa nomi descrittivi per variabili, funzioni e classi.
+- Prima di scrivere codice, ragiona su come strutturare il workflow.
 
-## Descrizione della struttura del dataset
-
-Il dati raccolti riguardano una campagna sperimentale per misurare le prestazioni di un motore cogenerativo al variare della percentuale di idrogeno miscelata con il gas naturale in ingresso. Le acquisizioni sperimentali sono salvati in files .csv.
-
-Un file d'esempio è presente nella cartella `sampleResults/` ed ha la stessa struttura dei files acquisti dal campo. 
-
-## Formato dei files
-
-La percentuale di idrogeno è identificata da un numero nel nome del file. 
-Es. nome: "prova_auto_x*.csv", x indica la percentuale di idrogeno. 
-
-Alcune grandezze rilevanti nelle colonne del .csv: 
-- WT01, potenza elettrica generata;
-- P_in, potenza termica in ingresso da combustibile;
-- n_th, efficienza termica; 
-- n_el, efficienza elettrica. 
-
-
+# Regole di Stile
+- Utilizza programmazione ad oggetti.
+- Preferisci funzioni pure.
+- Evita classi di lunghezza superiore a 120 righe.
+- Aggiungi commenti con le motivazioni e spiegazioni.
