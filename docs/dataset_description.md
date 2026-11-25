@@ -3,11 +3,14 @@ Le prove sperimentali sono effettuate su un motore al variare della percentuale 
 
 Per l'analisi delle prove si considera:
 - potenza nominale (massima) del motore di 30 kW;
+- livello di carico come percentuale tra potenza misurata WT01 e potenza nominale;
 - carico del motore minimo 30%;
-- step di carico 10% tra periodi stazionari durante una prova;
+- step di carico all'incirca 10% tra periodi stazionari durante una prova;
 - ogni prova fornisce un .csv separato, a percentuale di idrogeno costante;
 - la percentuale di idrogeno è identificata da un numero nel nome del file.
-    Es. nome: "prova_auto_x*.csv", x indica la percentuale di idrogeno. 
+    Es. nome: "prova_auto_x*.csv", x indica la percentuale di idrogeno;
+- la durata minima del periodo stazionario è di 30 minuti;
+- la tolleranza sul periodo stazionario è +/- 1 kW;
 
 ## Formato dei files
 I file CSV possono contenere:
@@ -16,7 +19,8 @@ I file CSV possono contenere:
 - separatore `;`;
 - virgola come separatore decimale;
 - delimitatori finali non uniformi;
-- spazi iniziali
+- spazi inizialiL;
+- il timestamp può oltrepassare la mezzanotte in alcuni csv.
 
 Le grandezze rilevanti nelle colonne del .csv da utilizzare nell'analisi sono:
 - Time, timestamp di acquisizione

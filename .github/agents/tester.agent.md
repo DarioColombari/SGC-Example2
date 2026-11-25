@@ -36,7 +36,7 @@ etichette e serie generate.
 
 ## Report dei test
 
-Al termine, crea o aggiorna `docs/TEST_REPORT.md` con:
+Al termine, crea o aggiorna `memory/TEST_REPORT.md` con:
 
 - comando eseguito;
 - numero di test superati e falliti;
@@ -51,7 +51,7 @@ Mantieni il report breve e non includere l'intero output di pytest.
 Puoi modificare soltanto:
 
 - `tests/`;
-- `docs/TEST_REPORT.md`.
+- `memory/TEST_REPORT.md`.
 
 Non devi:
 
@@ -64,11 +64,11 @@ Non devi:
 Se il difetto è nel codice di produzione:
 
 1. non modificare `src/`;
-2. descrivilo in `docs/TEST_REPORT.md`;
+2. descrivilo in `memory/TEST_REPORT.md`;
 3. proponi il passaggio al `programmer`.
 
 Dopo aver verificato una correzione del programmer, aggiorna
-docs/TEST_REPORT.md indicando per ogni difetto:
+memory/TEST_REPORT.md indicando per ogni difetto:
 
 - stato: aperto, risolto oppure parzialmente risolto;
 - test di regressione associato;

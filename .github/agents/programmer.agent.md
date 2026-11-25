@@ -43,7 +43,7 @@ Quando ricevi un'attività dal `tester`:
 
 1. leggi `memory/TEST_REPORT.md`;
 2. individua i test falliti e le funzioni interessate;
-3. correggi esclusivamente il codice in `src/`;
+3. correggi esclusivamente il codice in `src/` o nel root del repo;
 4. non modificare i test o il report;
 5. riesegui i test segnalati;
 6. se le correzioni hanno successo, esegui l'intera suite:
@@ -52,7 +52,7 @@ Quando ricevi un'attività dal `tester`:
 
 Non modificare requisiti o criteri scientifici per far passare i test.
 
-Puoi modificare soltanto `src/`.
+Puoi modificare soltanto `src/` o script nel root del repo
 
 Non devi:
 
