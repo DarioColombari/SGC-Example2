@@ -20,8 +20,8 @@ from src.stationary import identify_stationary_periods
 
 
 DEFAULT_DATASET_DIR = Path("experimentalResults")
-DEFAULT_OUTPUT_DIR = Path("results")
-OUTPUT_FILENAME = "electrical_efficiency_by_load.png"
+DEFAULT_OUTPUT_DIR  = Path("results")
+OUTPUT_FILENAME     = "electrical_efficiency_by_load.png"
 PER_FILE_OUTPUT_FILENAME = "electrical_efficiency_by_file.png"
 
 
